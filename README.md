@@ -1,12 +1,9 @@
-# YoWEP Website Repository
+# YoWEP: Youth for Environmental and Water Partners
 
-Welcome to the repository for the YoWEP (Youth for Environmental and Water Partners) website.
-This repository contains the source code and assets for the YoWEP website, aimed at promoting 
-environmental awareness and engaging youth in impactful initiatives.
+Welcome to the official repository for the YoWEP website. This repository houses the codebase
+and content for the YoWEP platform, dedicated to environmental and water-related initiatives.
 
 ## Features
-
-The YoWEP website includes the following sections and features:
 
 ### Home
 - Introduction to YoWEP
@@ -14,75 +11,141 @@ The YoWEP website includes the following sections and features:
 - Navigation to other sections
 
 ### About Us
-- Information about YoWEP's history
-- Detailed mission statement
-- Meet the YoWEP team
+- Detailed information about YoWEP's:
+  - History
+  - Mission
+  - Team members
 
 ### Projects
-- Details on ongoing projects
-- Information on past projects and their outcomes
+- Information on ongoing and past projects undertaken by YoWEP
 
 ### Get Involved
-- Opportunities for volunteering
-- Upcoming events
-- Educational resources for youth involvement
+- Opportunities for:
+  - Volunteering
+  - Participation in events
+  - Access to educational resources
 
 ### Donate
 - Secure donation options
-- Fundraising campaigns and their impact
+- Fundraising campaigns to support YoWEP's initiatives
 
 ### News & Events
-- Updates on YoWEP's activities
-- Announcements of upcoming events
-- Listings of past events
+- Updates and announcements related to YoWEP
+- Listing of upcoming events and activities
 
 ### Advocacy or Campaigns
-- Advocacy updates and initiatives
-- Resources for advocacy efforts
+- Updates on advocacy efforts
+- Resources for promoting environmental and water-related causes
 
 ### Resource Library
-- Educational materials and resources
-- Articles and publications on environmental topics
+- Educational materials and resources related to environmental and water topics
 
 ### Partnerships
-- Information on collaborations
-- Opportunities for partnerships with YoWEP
+- Information on collaborations with other organizations
+- Opportunities for partnerships
 
 ### Multimedia Gallery
-- Photos showcasing YoWEP's activities
-- Videos featuring testimonials and project highlights
+- Showcase of:
+  - Photos
+  - Videos
+  - Testimonials related to YoWEP's activities
 
 ## Repository Structure
 
-The repository is structured to maintain the codebase and assets required for the YoWEP website.
-Below is an overview of the main directories:
+```
+/
+|-- README.md
+|-- .gitignore
+|-- requirements.txt
+|-- manage.py
+|-- yowep_website/
+|   |-- __init__.py
+|   |-- settings.py
+|   |-- urls.py
+|   |-- wsgi.py
+|   |-- templates/
+|   |   |-- base.html
+|   |   |-- home.html
+|   |   |-- about.html
+|   |   |-- projects.html
+|   |   |-- get_involved.html
+|   |   |-- donate.html
+|   |   |-- news_events.html
+|   |   |-- advocacy.html
+|   |   |-- resources.html
+|   |   |-- partnerships.html
+|   |   |-- multimedia.html
+|   |-- static/
+|   |   |-- css/
+|   |   |-- js/
+|   |   |-- img/
+|   |-- apps/
+|   |   |-- __init__.py
+|   |   |-- home/
+|   |   |-- about/
+|   |   |-- projects/
+|   |   |-- get_involved/
+|   |   |-- donate/
+|   |   |-- news_events/
+|   |   |-- advocacy/
+|   |   |-- resources/
+|   |   |-- partnerships/
+|   |   |-- multimedia/
+|   |-- migrations/
+|   |-- forms.py
+|   |-- views.py
+|   |-- urls.py
+|-- requirements/
+|   |-- base.txt
+|   |-- development.txt
+|   |-- production.txt
+|-- scripts/
+|   |-- deploy.sh
+|   |-- backup_db.sh
+|-- docs/
+|   |-- architecture.md
+|   |-- setup.md
+|   |-- usage.md
+|-- LICENSE
+```
 
-- /templates: HTML templates for different sections of the website.
-- /static: Static files (CSS, JavaScript, images) used in the website.
-- /docs: Documentation files related to the project.
+## Getting Started
+
+To run the YoWEP website locally, follow these steps:
+
+1. Clone this repository:
+   ```
+   git clone <repository_url>
+   cd yowep_website
+   ```
+
+2. Set up your Python environment (using virtualenv, for example):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Apply migrations:
+   ```
+   python manage.py migrate
+   ```
+
+5. Run the development server:
+   ```
+   python manage.py runserver
+   ```
+
+6. Access the website at `http://localhost:8000/` in your web browser.
 
 ## Contributing
 
-We welcome contributions to improve and expand the YoWEP website. If you'd like to contribute, please follow these steps:
+Contributions to the YoWEP project are welcome! If you have suggestions, improvements, or new features to propose, please fork this repository, commit your changes, and submit a pull request. Be sure to follow our [code of conduct](CODE_OF_CONDUCT.md).
 
-1. Fork the repository and clone it to your local machine.
-2. Create a new branch (`git checkout -b feature/your-feature`) for your changes.
-3. Make your modifications and test them thoroughly.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/your-feature`) and submit a pull request.
+## License
 
-## Development Setup
-
-To set up the development environment for the YoWEP website, follow these steps:
-
-1. Install Python and Django.
-2. Clone the repository to your local machine.
-3. Install dependencies (`pip install -r requirements.txt`).
-4. Run migrations (`python manage.py migrate`).
-5. Start the development server (`python manage.py runserver`).
-
-## Feedback
-
-Your feedback on the YoWEP website is valuable to us. If you encounter issues, have suggestions for improvements, 
-or want to get involved, please reach out to us through our website's contact form.
-Thank you for your interest in YoWEP and your commitment to environmental stewardship!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
